@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-
-
 import paramiko # type: ignore
+from getpass import getpass
+
+
+
 
 host = input("Enter your Host: ")
 username = input("Enter your Username: ")
-password = input("Enter your Password: ")
+password = getpass("Enter your Password: ")
 
 # Create an SSH client
 clt = paramiko.SSHClient()
